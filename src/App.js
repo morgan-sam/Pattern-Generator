@@ -41,7 +41,9 @@ const App = () => {
   return (
     <div className="app">
       <div className="top-left-options">
+        <h2>Color</h2>
         <ColorSliders {...{ color, setColor }} />
+        <h2>Parameters</h2>
         <ParameterSliders {...{ params, setParams }} />
       </div>
       <canvas
