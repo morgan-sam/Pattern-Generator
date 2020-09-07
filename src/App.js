@@ -16,7 +16,7 @@ const App = () => {
       drawCanvasBackground(params);
       drawPattern(img, params);
     }
-  }, [img]);
+  }, [img, params]);
 
   useEffect(() => {
     (async () => {
