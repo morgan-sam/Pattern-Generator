@@ -46,7 +46,8 @@ export const drawPattern = (img, params) => {
         random_y_offset * Math.random();
 
       const rotation =
-        (Math.random() - 0.5) * (rotation_upper - rotation_lower);
+        (Math.random() - 0.5) * (rotation_upper - rotation_lower) +
+        (rotation_upper + rotation_lower) / 2;
       drawSvg(img, x, y, rotation, width, height);
     }
   }

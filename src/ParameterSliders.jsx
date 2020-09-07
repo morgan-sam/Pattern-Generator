@@ -105,9 +105,16 @@ const ParameterSliders = (props) => {
         max="180"
         value={params.rotation_lower}
         className="slider"
-        onChange={(e) =>
-          setParams({ ...params, rotation_lower: parseInt(e.target.value) })
-        }
+        onChange={(e) => {
+          const newValue = parseInt(e.target.value);
+          if (newValue > params.rotation_upper)
+            setParams({
+              ...params,
+              rotation_lower: newValue,
+              rotation_upper: newValue,
+            });
+          else setParams({ ...params, rotation_lower: newValue });
+        }}
       />
       <span>Rotation Upper Limit: {params.rotation_upper}</span>
       <input
@@ -117,9 +124,16 @@ const ParameterSliders = (props) => {
         max="180"
         value={params.rotation_upper}
         className="slider"
-        onChange={(e) =>
-          setParams({ ...params, rotation_upper: parseInt(e.target.value) })
-        }
+        onChange={(e) => {
+          const newValue = parseInt(e.target.value);
+          if (newValue < params.rotation_lower)
+            setParams({
+              ...params,
+              rotation_lower: newValue,
+              rotation_upper: newValue,
+            });
+          else setParams({ ...params, rotation_upper: newValue });
+        }}
       />
     </div>
   );
