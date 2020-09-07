@@ -33,7 +33,7 @@ const ParameterSliders = (props) => {
       value={params.shape_scale}
       className="slider"
       onChange={(e) =>
-        setParams({ ...params, shape_scale: parseInt(e.target.value) })
+        setParams({ ...params, shape_scale: parseFloat(e.target.value) })
       }
     />,
     <span>X Gap: {params.x_gap}</span>,
