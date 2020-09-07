@@ -29,11 +29,34 @@ const App = () => {
     <div className="app">
       <div className="slider-container">
         <span>Canvas Width</span>
-        <input type="range" min="1" max="100" value="50" class="slider" />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value={params.canvas_width}
+          onChange={() => null}
+        />
         <span>Canvas Height</span>
-        <input type="range" min="1" max="100" value="50" class="slider" />
-        <span>Shape Scale</span>
-        <input type="range" min="1" max="100" value="50" class="slider" />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value={params.canvas_height}
+          className="slider"
+          onChange={() => null}
+        />
+        <span>Shape Scale: {params.shape_scale}</span>
+        <input
+          type="range"
+          step="0.01"
+          min="1"
+          max="10"
+          value={params.shape_scale}
+          className="slider"
+          onChange={(e) =>
+            setParams({ ...params, shape_scale: e.target.value })
+          }
+        />
       </div>
       <canvas
         id="myCanvas"
