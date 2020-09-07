@@ -11,15 +11,15 @@ const getContext = () => document.getElementById("myCanvas").getContext("2d");
 
 export const drawCanvasBackground = (params) => {
   const { canvas_width, canvas_height } = params;
-  var ctx = getContext();
+  const ctx = getContext();
   ctx.fillStyle = "#FF0066";
   ctx.fillRect(0, 0, canvas_width, canvas_height);
 };
 
 export const drawPattern = (img, params) => {
   const { shape_scale, canvas_width, canvas_height } = params;
-  var width = img.width / shape_scale;
-  var height = img.height / shape_scale;
+  const width = img.width / shape_scale;
+  const height = img.height / shape_scale;
   const perRow = Math.round(canvas_width / width);
   const perColumn = Math.round(canvas_height / height);
   for (let i = 0; i < perRow * perColumn; i++) {
@@ -31,7 +31,7 @@ export const drawPattern = (img, params) => {
 };
 
 const drawSvg = (img, x, y, rotation, width, height) => {
-  var ctx = getContext();
+  const ctx = getContext();
   ctx.translate(x, y);
   ctx.rotate(degreesToRadians(rotation));
   ctx.drawImage(img, -width / 2, -height / 2, width, height);

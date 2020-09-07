@@ -8,7 +8,7 @@ const App = () => {
   const [params, setParams] = useState({
     canvas_width: 485,
     canvas_height: 755,
-    shape_scale: 2.8,
+    shape_scale: 5,
   });
 
   useEffect(() => {
