@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./app.css";
-import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
-import heart from "./svg/heart.svg";
 
-import ColorSliders from "./ColorSliders";
-import ParameterSliders from "./ParameterSliders";
-import ImageSelect from "./ImageSelect";
+import "css/app.css";
+
+import Heart from "svg/heart.svg";
+
+import ColorSliders from "jsx/ColorSliders";
+import ParameterSliders from "jsx/ParameterSliders";
+import ImageSelect from "jsx/ImageSelect";
+
+import { loadImage, drawCanvasBackground, drawPattern } from "js/draw";
 
 const App = () => {
   const [img, setImg] = useState(null);
@@ -40,7 +43,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    loadImageToState(heart);
+    loadImageToState(Heart);
   }, []);
 
   return (
