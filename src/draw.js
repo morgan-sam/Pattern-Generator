@@ -17,13 +17,13 @@ export const drawCanvasBackground = (params) => {
 };
 
 export const drawPattern = (img, params) => {
-  const { shape_scale, canvas_width, canvas_height } = params;
+  const { shape_scale, canvas_width, canvas_height, x_gap } = params;
   const width = img.width / shape_scale;
   const height = img.height / shape_scale;
   const perRow = Math.round(canvas_width / width);
   const perColumn = Math.round(canvas_height / height);
   for (let i = 0; i < perRow * perColumn; i++) {
-    const x = (i % perRow) * width + width / 2;
+    const x = (i % perRow) * width * x_gap + width / 2;
     const y = Math.floor(i / perRow) * height + height / 2;
     const rotation = Math.random() * 360;
     drawSvg(img, x, y, rotation, width, height);
