@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
+import shape from "./shape.svg";
+const CANVAS_WIDTH = 485;
+const CANVAS_HEIGHT = 755;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [img, setImg] = useState(null);
+
+  useEffect(() => {
+    if (img) {
+      drawCanvasBackground(CANVAS_WIDTH, CANVAS_HEIGHT);
+      drawPattern(img, CANVAS_WIDTH, CANVAS_HEIGHT);
+    }
+  }, [img]);
+
+  useEffect(() => {
+    (async () => {
+      const loadedImage = await loadImage(shape);
+      setImg(loadedImage);
+    })();
+  }, []);
+
+  return <canvas id="myCanvas" width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />;
+};
 
 export default App;
