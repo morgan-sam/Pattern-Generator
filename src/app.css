@@ -20,4 +20,5 @@
 
 .slider-container > * {
   text-align: center;
+  width: 13rem;
 }

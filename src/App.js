@@ -37,7 +37,7 @@ const App = () => {
         <input
           type="range"
           min="100"
-          max="1250"
+          max="950"
           value={params.canvas_width}
           onChange={(e) =>
             setParams({ ...params, canvas_width: e.target.value })
