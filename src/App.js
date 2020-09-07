@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
-import blob from "./svg/star.svg";
+import blob from "./svg/heart.svg";
 
 import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
@@ -17,11 +17,13 @@ const App = () => {
     canvas_width: 485,
     canvas_height: 755,
     shape_scale: 5,
-    x_gap: 1,
-    y_gap: 1,
+    x_gap: 2,
+    y_gap: 2,
     coverage: 100,
     random_x_offset: 0,
     random_y_offset: 0,
+    rotation_lower: -40,
+    rotation_upper: 40,
   });
 
   useEffect(() => {

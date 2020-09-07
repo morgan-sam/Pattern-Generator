@@ -97,6 +97,30 @@ const ParameterSliders = (props) => {
           setParams({ ...params, random_y_offset: parseInt(e.target.value) })
         }
       />
+      <span>Rotation Lower Limit: {params.rotation_lower}</span>
+      <input
+        type="range"
+        step="1"
+        min="-180"
+        max="180"
+        value={params.rotation_lower}
+        className="slider"
+        onChange={(e) =>
+          setParams({ ...params, rotation_lower: parseInt(e.target.value) })
+        }
+      />
+      <span>Rotation Upper Limit: {params.rotation_upper}</span>
+      <input
+        type="range"
+        step="1"
+        min="-180"
+        max="180"
+        value={params.rotation_upper}
+        className="slider"
+        onChange={(e) =>
+          setParams({ ...params, rotation_upper: parseInt(e.target.value) })
+        }
+      />
     </div>
   );
 };
