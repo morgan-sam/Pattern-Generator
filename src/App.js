@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
-import blob from "./blob.svg";
+import blob from "./svg/star.svg";
 
 import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
