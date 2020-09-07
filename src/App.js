@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="slider-container">
+      <div className="top-left-options">
         <ColorSliders {...{ color, setColor }} />
         <ParameterSliders {...{ params, setParams }} />
       </div>

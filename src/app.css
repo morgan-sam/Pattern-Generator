@@ -8,14 +8,17 @@
   align-items: center;
   justify-content: center;
 }
-
-.slider-container {
+.top-left-options {
   top: 0;
   left: 0;
   position: absolute;
+  margin: 2rem;
+}
+
+.slider-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 2rem;
+  width: 13rem;
 }
 
 .slider-container > * {
