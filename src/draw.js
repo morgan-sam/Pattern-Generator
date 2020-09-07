@@ -24,6 +24,8 @@ export const drawPattern = (img, params) => {
     x_gap,
     y_gap,
     coverage,
+    random_x_offset,
+    random_y_offset,
   } = params;
   const width = img.width / shape_scale;
   const height = img.height / shape_scale;
@@ -31,8 +33,14 @@ export const drawPattern = (img, params) => {
   const perColumn = Math.round(canvas_height / height);
   for (let i = 0; i < perRow * perColumn; i++) {
     if (Math.random() * 100 < coverage) {
-      const x = (i % perRow) * width * x_gap + width / 2;
-      const y = Math.floor(i / perRow) * height * y_gap + height / 2;
+      const x =
+        (i % perRow) * width * x_gap +
+        width / 2 +
+        random_x_offset * Math.random();
+      const y =
+        Math.floor(i / perRow) * height * y_gap +
+        height / 2 +
+        random_y_offset * Math.random();
       const rotation = Math.random() * 360;
       drawSvg(img, x, y, rotation, width, height);
     }

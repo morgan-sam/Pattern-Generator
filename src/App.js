@@ -12,6 +12,8 @@ const App = () => {
     x_gap: 1,
     y_gap: 1,
     coverage: 100,
+    random_x_offset: 0,
+    random_y_offset: 0,
   });
 
   useEffect(() => {
@@ -93,6 +95,30 @@ const App = () => {
           value={params.coverage}
           className="slider"
           onChange={(e) => setParams({ ...params, coverage: e.target.value })}
+        />
+        <span>Random X Offset: {params.random_x_offset}</span>
+        <input
+          type="range"
+          step="0.01"
+          min="-100"
+          max="100"
+          value={params.random_x_offset}
+          className="slider"
+          onChange={(e) =>
+            setParams({ ...params, random_x_offset: e.target.value })
+          }
+        />
+        <span>Random Y Offset: {params.random_y_offset}</span>
+        <input
+          type="range"
+          step="0.01"
+          min="-100"
+          max="100"
+          value={params.random_y_offset}
+          className="slider"
+          onChange={(e) =>
+            setParams({ ...params, random_y_offset: e.target.value })
+          }
         />
       </div>
       <canvas
