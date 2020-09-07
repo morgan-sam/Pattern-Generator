@@ -27,6 +27,14 @@ const App = () => {
 
   return (
     <div className="app">
+      <div className="slider-container">
+        <span>Canvas Width</span>
+        <input type="range" min="1" max="100" value="50" class="slider" />
+        <span>Canvas Height</span>
+        <input type="range" min="1" max="100" value="50" class="slider" />
+        <span>Shape Scale</span>
+        <input type="range" min="1" max="100" value="50" class="slider" />
+      </div>
       <canvas
         id="myCanvas"
         width={params.canvas_width}

@@ -8,3 +8,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.slider-container {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem;
+}
+
+.slider-container > * {
+  text-align: center;
+}
