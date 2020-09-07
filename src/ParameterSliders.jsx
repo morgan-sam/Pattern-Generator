@@ -9,7 +9,9 @@ const ParameterSliders = (props) => {
       min="100"
       max="950"
       value={params.canvas_width}
-      onChange={(e) => setParams({ ...params, canvas_width: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, canvas_width: parseInt(e.target.value) })
+      }
     />,
     <span>Canvas Height: {params.canvas_height}</span>,
     <input
@@ -18,7 +20,9 @@ const ParameterSliders = (props) => {
       max="950"
       value={params.canvas_height}
       className="slider"
-      onChange={(e) => setParams({ ...params, canvas_height: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, canvas_height: parseInt(e.target.value) })
+      }
     />,
     <span>Shape Scale: {params.shape_scale}</span>,
     <input
@@ -28,7 +32,9 @@ const ParameterSliders = (props) => {
       max="10"
       value={params.shape_scale}
       className="slider"
-      onChange={(e) => setParams({ ...params, shape_scale: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, shape_scale: parseInt(e.target.value) })
+      }
     />,
     <span>X Gap: {params.x_gap}</span>,
     <input
@@ -38,7 +44,9 @@ const ParameterSliders = (props) => {
       max="3"
       value={params.x_gap}
       className="slider"
-      onChange={(e) => setParams({ ...params, x_gap: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, x_gap: parseFloat(e.target.value) })
+      }
     />,
     <span>Y Gap: {params.y_gap}</span>,
     <input
@@ -48,40 +56,44 @@ const ParameterSliders = (props) => {
       max="3"
       value={params.y_gap}
       className="slider"
-      onChange={(e) => setParams({ ...params, y_gap: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, y_gap: parseFloat(e.target.value) })
+      }
     />,
     <span>Coverage: {params.coverage}</span>,
     <input
       type="range"
-      step="0.01"
+      step="1"
       min="0"
       max="100"
       value={params.coverage}
       className="slider"
-      onChange={(e) => setParams({ ...params, coverage: e.target.value })}
+      onChange={(e) =>
+        setParams({ ...params, coverage: parseInt(e.target.value) })
+      }
     />,
     <span>Random X Offset: {params.random_x_offset}</span>,
     <input
       type="range"
-      step="0.01"
+      step="1"
       min="-100"
       max="100"
       value={params.random_x_offset}
       className="slider"
       onChange={(e) =>
-        setParams({ ...params, random_x_offset: e.target.value })
+        setParams({ ...params, random_x_offset: parseInt(e.target.value) })
       }
     />,
     <span>Random Y Offset: {params.random_y_offset}</span>,
     <input
       type="range"
-      step="0.01"
+      step="1"
       min="-100"
       max="100"
       value={params.random_y_offset}
       className="slider"
       onChange={(e) =>
-        setParams({ ...params, random_y_offset: e.target.value })
+        setParams({ ...params, random_y_offset: parseInt(e.target.value) })
       }
     />,
   ];
