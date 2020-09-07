@@ -2,10 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
 import shape from "./shape.svg";
+
+import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
 
 const App = () => {
   const [img, setImg] = useState(null);
+  const [color, setColor] = useState({
+    hue: 0,
+    saturation: 0,
+    lightness: 0,
+  });
   const [params, setParams] = useState({
     canvas_width: 485,
     canvas_height: 755,
@@ -34,6 +41,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="slider-container">
+        <ColorSliders {...{ color, setColor }} />
         <ParameterSliders {...{ params, setParams }} />
       </div>
       <canvas
