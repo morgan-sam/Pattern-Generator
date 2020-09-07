@@ -11,7 +11,6 @@ const getContext = () => document.getElementById("myCanvas").getContext("2d");
 
 export const drawCanvasBackground = (color, params) => {
   const { hue, saturation, lightness } = color;
-  console.log(color);
   const { canvas_width, canvas_height } = params;
   const ctx = getContext();
   ctx.fillStyle = `hsl(${hue},${saturation}%,${lightness}%)`;
