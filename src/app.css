@@ -13,15 +13,15 @@
   left: 0;
   position: absolute;
   margin: 2rem;
+  text-align: center;
 }
 
 .slider-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 13rem;
 }
 
 .slider-container > * {
   text-align: center;
-  width: 13rem;
+  margin: 5px 10px;
 }
