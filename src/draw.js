@@ -15,7 +15,6 @@ export const drawCanvasBackground = (CANVAS_WIDTH, CANVAS_HEIGHT) => {
   var ctx = getContext();
   ctx.fillStyle = "#FF0066";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.fillStyle = "#FFFFFF";
 };
 
 export const drawPattern = (img, CANVAS_WIDTH, CANVAS_HEIGHT) => {
