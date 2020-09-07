@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
 import shape from "./shape.svg";
-const CANVAS_WIDTH = 485;
-const CANVAS_HEIGHT = 755;
 
 const App = () => {
   const [img, setImg] = useState(null);
+  const [params, setParams] = useState({
+    canvas_width: 485,
+    canvas_height: 755,
+    shape_scale: 2.8,
+  });
 
   useEffect(() => {
     if (img) {
-      drawCanvasBackground(CANVAS_WIDTH, CANVAS_HEIGHT);
-      drawPattern(img, CANVAS_WIDTH, CANVAS_HEIGHT);
+      drawCanvasBackground(params);
+      drawPattern(img, params);
     }
   }, [img]);
 
@@ -21,7 +24,13 @@ const App = () => {
     })();
   }, []);
 
-  return <canvas id="myCanvas" width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />;
+  return (
+    <canvas
+      id="myCanvas"
+      width={params.canvas_width}
+      height={params.canvas_height}
+    />
+  );
 };
 
 export default App;

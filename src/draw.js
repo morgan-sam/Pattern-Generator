@@ -1,5 +1,3 @@
-const SHAPE_SCALE = 2.8;
-
 export const loadImage = async (imgURL) => {
   return new Promise((resolve, reject) => {
     let img = new Image();
@@ -11,17 +9,19 @@ export const loadImage = async (imgURL) => {
 
 const getContext = () => document.getElementById("myCanvas").getContext("2d");
 
-export const drawCanvasBackground = (CANVAS_WIDTH, CANVAS_HEIGHT) => {
+export const drawCanvasBackground = (params) => {
+  const { canvas_width, canvas_height } = params;
   var ctx = getContext();
   ctx.fillStyle = "#FF0066";
-  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.fillRect(0, 0, canvas_width, canvas_height);
 };
 
-export const drawPattern = (img, CANVAS_WIDTH, CANVAS_HEIGHT) => {
-  var width = img.width / SHAPE_SCALE;
-  var height = img.height / SHAPE_SCALE;
-  const perRow = Math.round(CANVAS_WIDTH / width);
-  const perColumn = Math.round(CANVAS_HEIGHT / height);
+export const drawPattern = (img, params) => {
+  const { shape_scale, canvas_width, canvas_height } = params;
+  var width = img.width / shape_scale;
+  var height = img.height / shape_scale;
+  const perRow = Math.round(canvas_width / width);
+  const perColumn = Math.round(canvas_height / height);
   for (let i = 0; i < perRow * perColumn; i++) {
     const x = (i % perRow) * width + width / 2;
     const y = Math.floor(i / perRow) * height + height / 2;
