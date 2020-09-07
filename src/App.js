@@ -11,6 +11,7 @@ const App = () => {
     shape_scale: 5,
     x_gap: 1,
     y_gap: 1,
+    coverage: 100,
   });
 
   useEffect(() => {
@@ -82,6 +83,16 @@ const App = () => {
           value={params.y_gap}
           className="slider"
           onChange={(e) => setParams({ ...params, y_gap: e.target.value })}
+        />
+        <span>Coverage: {params.coverage}</span>
+        <input
+          type="range"
+          step="0.01"
+          min="0"
+          max="100"
+          value={params.coverage}
+          className="slider"
+          onChange={(e) => setParams({ ...params, coverage: e.target.value })}
         />
       </div>
       <canvas
