@@ -3,7 +3,7 @@ import React from "react";
 const ColorSliders = (props) => {
   const { color, setColor } = props;
   return [
-    <span>Hue:</span>,
+    <span>Hue: {color.hue}</span>,
     <input
       type="range"
       min="0"
@@ -12,7 +12,7 @@ const ColorSliders = (props) => {
       onChange={(e) => setColor({ ...color, hue: e.target.value })}
       step="1"
     />,
-    <span>Saturation:</span>,
+    <span>Saturation: {color.saturation}</span>,
     <input
       type="range"
       min="0"
@@ -21,7 +21,7 @@ const ColorSliders = (props) => {
       onChange={(e) => setColor({ ...color, saturation: e.target.value })}
       step="1"
     />,
-    <span>Lightness:</span>,
+    <span>Lightness: {color.lightness}</span>,
     <input
       type="range"
       min="20"
