@@ -5,6 +5,7 @@ import blob from "./svg/heart.svg";
 
 import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
+import ImageSelect from "./ImageSelect";
 
 const App = () => {
   const [img, setImg] = useState(null);
@@ -43,6 +44,8 @@ const App = () => {
   return (
     <div className="app">
       <div className="top-left-options">
+        <h2>Shape</h2>
+        <ImageSelect />
         <h2>Color</h2>
         <ColorSliders {...{ color, setColor }} />
         <h2>Parameters</h2>
