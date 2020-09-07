@@ -10,6 +10,7 @@ const App = () => {
     canvas_height: 755,
     shape_scale: 5,
     x_gap: 1,
+    y_gap: 1,
   });
 
   useEffect(() => {
@@ -71,6 +72,16 @@ const App = () => {
           value={params.x_gap}
           className="slider"
           onChange={(e) => setParams({ ...params, x_gap: e.target.value })}
+        />
+        <span>Y Gap: {params.y_gap}</span>
+        <input
+          type="range"
+          step="0.01"
+          min="1"
+          max="3"
+          value={params.y_gap}
+          className="slider"
+          onChange={(e) => setParams({ ...params, y_gap: e.target.value })}
         />
       </div>
       <canvas
