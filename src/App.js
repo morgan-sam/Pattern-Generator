@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
-import blob from "./svg/heart.svg";
+import heart from "./svg/heart.svg";
 
 import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
@@ -34,18 +34,20 @@ const App = () => {
     }
   }, [color, img, params]);
 
+  const loadImageToState = async (svg) => {
+    const loadedImage = await loadImage(svg);
+    setImg(loadedImage);
+  };
+
   useEffect(() => {
-    (async () => {
-      const loadedImage = await loadImage(blob);
-      setImg(loadedImage);
-    })();
+    loadImageToState(heart);
   }, []);
 
   return (
     <div className="app">
       <div className="top-left-options">
         <h2>Shape</h2>
-        <ImageSelect />
+        <ImageSelect {...{ loadImageToState }} />
         <h2>Color</h2>
         <ColorSliders {...{ color, setColor }} />
         <h2>Parameters</h2>
