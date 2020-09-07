@@ -9,10 +9,12 @@ export const loadImage = async (imgURL) => {
 
 const getContext = () => document.getElementById("myCanvas").getContext("2d");
 
-export const drawCanvasBackground = (params) => {
+export const drawCanvasBackground = (color, params) => {
+  const { hue, saturation, lightness } = color;
+  console.log(color);
   const { canvas_width, canvas_height } = params;
   const ctx = getContext();
-  ctx.fillStyle = "#FF0066";
+  ctx.fillStyle = `hsl(${hue},${saturation}%,${lightness}%)`;
   ctx.fillRect(0, 0, canvas_width, canvas_height);
 };
 

@@ -10,8 +10,8 @@ const App = () => {
   const [img, setImg] = useState(null);
   const [color, setColor] = useState({
     hue: 0,
-    saturation: 0,
-    lightness: 0,
+    saturation: 80,
+    lightness: 70,
   });
   const [params, setParams] = useState({
     canvas_width: 485,
@@ -26,10 +26,10 @@ const App = () => {
 
   useEffect(() => {
     if (img) {
-      drawCanvasBackground(params);
+      drawCanvasBackground(color, params);
       drawPattern(img, params);
     }
-  }, [img, params]);
+  }, [color, img, params]);
 
   useEffect(() => {
     (async () => {
