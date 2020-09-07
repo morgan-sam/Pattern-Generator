@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
 import shape from "./shape.svg";
 
@@ -25,11 +26,13 @@ const App = () => {
   }, []);
 
   return (
-    <canvas
-      id="myCanvas"
-      width={params.canvas_width}
-      height={params.canvas_height}
-    />
+    <div className="app">
+      <canvas
+        id="myCanvas"
+        width={params.canvas_width}
+        height={params.canvas_height}
+      />
+    </div>
   );
 };
 
