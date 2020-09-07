@@ -31,4 +31,5 @@
 .slider-container > * {
   text-align: center;
   margin: 5px 10px;
+  width: 11rem;
 }
