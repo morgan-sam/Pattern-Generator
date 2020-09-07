@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./app.css";
 import { loadImage, drawCanvasBackground, drawPattern } from "./draw";
-import shape from "./shape.svg";
+import blob from "./blob.svg";
 
 import ColorSliders from "./ColorSliders";
 import ParameterSliders from "./ParameterSliders";
@@ -33,7 +33,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const loadedImage = await loadImage(shape);
+      const loadedImage = await loadImage(blob);
       setImg(loadedImage);
     })();
   }, []);
