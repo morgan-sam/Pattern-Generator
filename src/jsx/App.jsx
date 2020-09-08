@@ -47,6 +47,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="interface">
+        <h1>Pattern Generator</h1>
         <div>
           <h2>Shape</h2>
           <ImageSelect {...{ loadImageToState }} />
