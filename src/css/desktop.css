@@ -20,6 +20,7 @@
   }
 
   .canvas {
+    transform: translateX(12vw);
     width: auto;
     height: auto;
   }
