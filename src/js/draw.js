@@ -34,22 +34,32 @@ const calculateRotation = (params) => {
   );
 };
 
+const calculateXPosition = (width, i, perRow, params) => {
+  const { x_gap, random_x_offset } = params;
+  return (
+    (i % perRow) * width * x_gap + width / 2 + random_x_offset * Math.random()
+  );
+};
+
+const calculateYPosition = (height, i, perRow, params) => {
+  const { y_gap, random_y_offset } = params;
+  return (
+    Math.floor(i / perRow) * height * y_gap +
+    height / 2 +
+    random_y_offset * Math.random()
+  );
+};
+
 export const drawPattern = (img, params) => {
-  const { x_gap, y_gap, coverage, random_x_offset, random_y_offset } = params;
+  const { coverage } = params;
   const { width, height, perRow, perColumn } = calculatePatternInfo(
     img,
     params
   );
   for (let i = 0; i < perRow * perColumn; i++) {
     if (Math.random() * 100 < coverage) {
-      const x =
-        (i % perRow) * width * x_gap +
-        width / 2 +
-        random_x_offset * Math.random();
-      const y =
-        Math.floor(i / perRow) * height * y_gap +
-        height / 2 +
-        random_y_offset * Math.random();
+      const x = calculateXPosition(width, i, perRow, params);
+      const y = calculateYPosition(height, i, perRow, params);
       const rotation = calculateRotation(params);
       drawSvg(img, x, y, rotation, width, height);
     }
