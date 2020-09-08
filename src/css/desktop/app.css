@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   .app {
     position: absolute;
     top: 0;
@@ -20,6 +20,46 @@
   .canvas {
     width: 50vw;
     height: 100vh;
+  }
+
+  .slider-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slider-container > * {
+    text-align: center;
+    margin: 5px 10px;
+    width: 12rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  * {
+    font-size: 1rem;
+  }
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .canvas {
+    width: auto;
+    height: auto;
+  }
+
+  .canvas-slider {
+    display: block;
   }
 
   .slider-container {
