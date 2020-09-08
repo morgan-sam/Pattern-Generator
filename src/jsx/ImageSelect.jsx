@@ -1,6 +1,7 @@
 import React from "react";
 
-import "css/imageSelect.css";
+import "css/mobile/imageSelect.css";
+// import "css/desktop/imageSelect.css";
 
 import Blob from "svg/blob.svg";
 import Heart from "svg/heart.svg";

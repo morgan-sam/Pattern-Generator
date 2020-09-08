@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import "css/app.css";
+import "css/mobile/app.css";
+import "css/desktop/app.css";
 
 import Heart from "svg/heart.svg";
 
@@ -48,16 +49,23 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="top-left-options">
-        <h2>Shape</h2>
-        <ImageSelect {...{ loadImageToState }} />
-        <h2>Color</h2>
-        <ColorSliders {...{ color, setColor }} />
-        <h2>Parameters</h2>
-        <ParameterSliders {...{ params, setParams }} />
+      <div className="options">
+        <div>
+          <h2>Shape</h2>
+          <ImageSelect {...{ loadImageToState }} />
+        </div>
+        <div>
+          <h2>Color</h2>
+          <ColorSliders {...{ color, setColor }} />
+        </div>
+        <div>
+          <h2>Parameters</h2>
+          <ParameterSliders {...{ params, setParams }} />
+        </div>
       </div>
       <canvas
         id="myCanvas"
+        className="canvas"
         width={params.canvas_width}
         height={params.canvas_height}
       />

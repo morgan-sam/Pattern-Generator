@@ -1,0 +1,17 @@
+.svg-button-container {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-button {
+  width: calc(2rem + 1vw);
+  height: calc(2rem + 1vw);
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 1rem;
+  cursor: pointer;
+}

@@ -4,8 +4,9 @@ const ParameterSliders = (props) => {
   const { params, setParams } = props;
   return (
     <div className="slider-container">
-      <span>Canvas Width: {params.canvas_width}</span>
+      <span className="canvas-slider">Canvas Width: {params.canvas_width}</span>
       <input
+        className="canvas-slider"
         type="range"
         min="100"
         max="950"
@@ -14,13 +15,15 @@ const ParameterSliders = (props) => {
           setParams({ ...params, canvas_width: parseInt(e.target.value) })
         }
       />
-      <span>Canvas Height: {params.canvas_height}</span>
+      <span className="canvas-slider">
+        Canvas Height: {params.canvas_height}
+      </span>
       <input
+        className="canvas-slider"
         type="range"
         min="100"
         max="950"
         value={params.canvas_height}
-        className="slider"
         onChange={(e) =>
           setParams({ ...params, canvas_height: parseInt(e.target.value) })
         }
