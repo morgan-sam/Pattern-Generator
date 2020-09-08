@@ -33,26 +33,26 @@
   align-items: center;
 }
 
-.options {
+.interface {
   font-size: 0.7rem;
   display: grid;
   margin: 1rem;
 }
 
-.options > * {
+.interface > * {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.options > *:nth-child(1) {
+.interface > *:nth-child(1) {
   grid-area: 1 / 1 / 2 / 2;
 }
-.options > *:nth-child(2) {
+.interface > *:nth-child(2) {
   grid-area: 2 / 1 / 3 / 2;
 }
-.options > *:nth-child(3) {
+.interface > *:nth-child(3) {
   grid-area: 1 / 2 / 3 / 3;
 }
 

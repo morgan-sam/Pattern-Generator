@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="options">
+      <div className="interface">
         <div>
           <h2>Shape</h2>
           <ImageSelect {...{ loadImageToState }} />
