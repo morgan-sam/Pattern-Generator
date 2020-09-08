@@ -35,15 +35,7 @@ const calculateRotation = (params) => {
 };
 
 export const drawPattern = (img, params) => {
-  const {
-    x_gap,
-    y_gap,
-    coverage,
-    random_x_offset,
-    random_y_offset,
-    rotation_lower,
-    rotation_upper,
-  } = params;
+  const { x_gap, y_gap, coverage, random_x_offset, random_y_offset } = params;
   const { width, height, perRow, perColumn } = calculatePatternInfo(
     img,
     params
