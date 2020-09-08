@@ -17,11 +17,17 @@ export const drawCanvasBackground = (color, params) => {
   ctx.fillRect(0, 0, canvas_width, canvas_height);
 };
 
+const calculatePatternInfo = (img, params) => {
+  const { shape_scale, canvas_width, canvas_height } = params;
+  const width = img.width / shape_scale;
+  const height = img.height / shape_scale;
+  const perRow = Math.round(canvas_width / width);
+  const perColumn = Math.round(canvas_height / height);
+  return { width, height, perRow, perColumn };
+};
+
 export const drawPattern = (img, params) => {
   const {
-    shape_scale,
-    canvas_width,
-    canvas_height,
     x_gap,
     y_gap,
     coverage,
@@ -30,10 +36,10 @@ export const drawPattern = (img, params) => {
     rotation_lower,
     rotation_upper,
   } = params;
-  const width = img.width / shape_scale;
-  const height = img.height / shape_scale;
-  const perRow = Math.round(canvas_width / width);
-  const perColumn = Math.round(canvas_height / height);
+  const { width, height, perRow, perColumn } = calculatePatternInfo(
+    img,
+    params
+  );
   for (let i = 0; i < perRow * perColumn; i++) {
     if (Math.random() * 100 < coverage) {
       const x =
