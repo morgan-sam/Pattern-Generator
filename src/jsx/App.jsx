@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import "css/mobile/app.css";
-import "css/desktop/app.css";
-
 import Heart from "svg/heart.svg";
 
 import ColorSliders from "jsx/ColorSliders";

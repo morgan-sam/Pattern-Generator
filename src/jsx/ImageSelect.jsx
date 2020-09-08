@@ -1,8 +1,5 @@
 import React from "react";
 
-import "css/mobile/imageSelect.css";
-import "css/desktop/imageSelect.css";
-
 import Blob from "svg/blob.svg";
 import Heart from "svg/heart.svg";
 import Star from "svg/star.svg";
