@@ -7,9 +7,14 @@ export const loadImage = async (imgURL) => {
   });
 };
 
+export const drawPattern = (img, color, params) => {
+  drawCanvasBackground(color, params);
+  drawAllShapes(img, params);
+};
+
 const getContext = () => document.getElementById("myCanvas").getContext("2d");
 
-export const drawCanvasBackground = (color, params) => {
+const drawCanvasBackground = (color, params) => {
   const { hue, saturation, lightness } = color;
   const { canvas_width, canvas_height } = params;
   const ctx = getContext();
@@ -50,7 +55,7 @@ const calculateYPosition = (height, i, perRow, params) => {
   );
 };
 
-export const drawPattern = (img, params) => {
+const drawAllShapes = (img, params) => {
   const { coverage } = params;
   const { width, height, perRow, perColumn } = calculatePatternInfo(
     img,

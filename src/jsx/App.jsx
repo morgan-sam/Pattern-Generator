@@ -6,7 +6,7 @@ import ColorSliders from "jsx/ColorSliders";
 import ParameterSliders from "jsx/ParameterSliders";
 import ImageSelect from "jsx/ImageSelect";
 
-import { loadImage, drawCanvasBackground, drawPattern } from "js/draw";
+import { loadImage, drawPattern } from "js/draw";
 
 const App = () => {
   const [img, setImg] = useState(null);
@@ -29,10 +29,7 @@ const App = () => {
   });
 
   useEffect(() => {
-    if (img) {
-      drawCanvasBackground(color, params);
-      drawPattern(img, params);
-    }
+    if (img) drawPattern(img, color, params);
   }, [color, img, params]);
 
   const loadImageToState = async (svg) => {
