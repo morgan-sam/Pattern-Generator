@@ -26,6 +26,14 @@ const calculatePatternInfo = (img, params) => {
   return { width, height, perRow, perColumn };
 };
 
+const calculateRotation = (params) => {
+  const { rotation_lower, rotation_upper } = params;
+  return (
+    (Math.random() - 0.5) * (rotation_upper - rotation_lower) +
+    (rotation_upper + rotation_lower) / 2
+  );
+};
+
 export const drawPattern = (img, params) => {
   const {
     x_gap,
@@ -50,10 +58,7 @@ export const drawPattern = (img, params) => {
         Math.floor(i / perRow) * height * y_gap +
         height / 2 +
         random_y_offset * Math.random();
-
-      const rotation =
-        (Math.random() - 0.5) * (rotation_upper - rotation_lower) +
-        (rotation_upper + rotation_lower) / 2;
+      const rotation = calculateRotation(params);
       drawSvg(img, x, y, rotation, width, height);
     }
   }
