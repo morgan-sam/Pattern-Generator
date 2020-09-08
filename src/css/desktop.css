@@ -43,10 +43,6 @@
   .svg-button {
     height: 2rem;
     width: 2rem;
-    background-color: blue;
-    padding: 0.5rem;
-    border-radius: 10px;
     margin: 0.5rem;
-    cursor: pointer;
   }
 }
