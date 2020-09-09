@@ -26,7 +26,7 @@ const ColorSliders = (props) => {
       <input
         type="range"
         min="0"
-        max="95"
+        max="90"
         value={color.lightness}
         onChange={(e) => setColor({ ...color, lightness: e.target.value })}
         step="1"
