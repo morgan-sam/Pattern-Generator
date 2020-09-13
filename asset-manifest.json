@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Pattern-Generator/static/css/main.dc454b89.chunk.css",
-    "main.js": "/Pattern-Generator/static/js/main.821f1a04.chunk.js",
-    "main.js.map": "/Pattern-Generator/static/js/main.821f1a04.chunk.js.map",
-    "runtime-main.js": "/Pattern-Generator/static/js/runtime-main.d2255d6b.js",
-    "runtime-main.js.map": "/Pattern-Generator/static/js/runtime-main.d2255d6b.js.map",
-    "static/js/2.8716e5fa.chunk.js": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js",
-    "static/js/2.8716e5fa.chunk.js.map": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js.map",
+    "main.js": "/Pattern-Generator/static/js/main.0cd2acbe.chunk.js",
+    "main.js.map": "/Pattern-Generator/static/js/main.0cd2acbe.chunk.js.map",
+    "runtime-main.js": "/Pattern-Generator/static/js/runtime-main.dcfaf662.js",
+    "runtime-main.js.map": "/Pattern-Generator/static/js/runtime-main.dcfaf662.js.map",
+    "static/js/2.daf1bfcf.chunk.js": "/Pattern-Generator/static/js/2.daf1bfcf.chunk.js",
+    "static/js/2.daf1bfcf.chunk.js.map": "/Pattern-Generator/static/js/2.daf1bfcf.chunk.js.map",
     "index.html": "/Pattern-Generator/index.html",
-    "precache-manifest.003b358b06dd6f2d3177d33b062b1afa.js": "/Pattern-Generator/precache-manifest.003b358b06dd6f2d3177d33b062b1afa.js",
+    "precache-manifest.88e0371e52a69fdd139c02dc20999ea5.js": "/Pattern-Generator/precache-manifest.88e0371e52a69fdd139c02dc20999ea5.js",
     "service-worker.js": "/Pattern-Generator/service-worker.js",
     "static/css/main.dc454b89.chunk.css.map": "/Pattern-Generator/static/css/main.dc454b89.chunk.css.map",
-    "static/js/2.8716e5fa.chunk.js.LICENSE.txt": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js.LICENSE.txt",
+    "static/js/2.daf1bfcf.chunk.js.LICENSE.txt": "/Pattern-Generator/static/js/2.daf1bfcf.chunk.js.LICENSE.txt",
     "static/media/blob.svg": "/Pattern-Generator/static/media/blob.8a42bc92.svg",
     "static/media/butterfly.svg": "/Pattern-Generator/static/media/butterfly.27d96e32.svg",
     "static/media/heart.svg": "/Pattern-Generator/static/media/heart.ec65b7a0.svg",
     "static/media/star.svg": "/Pattern-Generator/static/media/star.ac0e8423.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2255d6b.js",
-    "static/js/2.8716e5fa.chunk.js",
+    "static/js/runtime-main.dcfaf662.js",
+    "static/js/2.daf1bfcf.chunk.js",
     "static/css/main.dc454b89.chunk.css",
-    "static/js/main.821f1a04.chunk.js"
+    "static/js/main.0cd2acbe.chunk.js"
   ]
 }
