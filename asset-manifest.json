@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/pattern-generator/static/css/main.dc454b89.chunk.css",
-    "main.js": "/pattern-generator/static/js/main.0cd2acbe.chunk.js",
-    "main.js.map": "/pattern-generator/static/js/main.0cd2acbe.chunk.js.map",
-    "runtime-main.js": "/pattern-generator/static/js/runtime-main.c99df2b6.js",
-    "runtime-main.js.map": "/pattern-generator/static/js/runtime-main.c99df2b6.js.map",
-    "static/js/2.daf1bfcf.chunk.js": "/pattern-generator/static/js/2.daf1bfcf.chunk.js",
-    "static/js/2.daf1bfcf.chunk.js.map": "/pattern-generator/static/js/2.daf1bfcf.chunk.js.map",
-    "index.html": "/pattern-generator/index.html",
-    "precache-manifest.b1d2280b7b848a139da35359c914eb68.js": "/pattern-generator/precache-manifest.b1d2280b7b848a139da35359c914eb68.js",
-    "service-worker.js": "/pattern-generator/service-worker.js",
-    "static/css/main.dc454b89.chunk.css.map": "/pattern-generator/static/css/main.dc454b89.chunk.css.map",
-    "static/js/2.daf1bfcf.chunk.js.LICENSE.txt": "/pattern-generator/static/js/2.daf1bfcf.chunk.js.LICENSE.txt",
-    "static/media/blob.svg": "/pattern-generator/static/media/blob.8a42bc92.svg",
-    "static/media/butterfly.svg": "/pattern-generator/static/media/butterfly.27d96e32.svg",
-    "static/media/heart.svg": "/pattern-generator/static/media/heart.ec65b7a0.svg",
-    "static/media/star.svg": "/pattern-generator/static/media/star.ac0e8423.svg"
+    "main.css": "/Pattern-Generator/static/css/main.dc454b89.chunk.css",
+    "main.js": "/Pattern-Generator/static/js/main.821f1a04.chunk.js",
+    "main.js.map": "/Pattern-Generator/static/js/main.821f1a04.chunk.js.map",
+    "runtime-main.js": "/Pattern-Generator/static/js/runtime-main.d2255d6b.js",
+    "runtime-main.js.map": "/Pattern-Generator/static/js/runtime-main.d2255d6b.js.map",
+    "static/js/2.8716e5fa.chunk.js": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js",
+    "static/js/2.8716e5fa.chunk.js.map": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js.map",
+    "index.html": "/Pattern-Generator/index.html",
+    "precache-manifest.003b358b06dd6f2d3177d33b062b1afa.js": "/Pattern-Generator/precache-manifest.003b358b06dd6f2d3177d33b062b1afa.js",
+    "service-worker.js": "/Pattern-Generator/service-worker.js",
+    "static/css/main.dc454b89.chunk.css.map": "/Pattern-Generator/static/css/main.dc454b89.chunk.css.map",
+    "static/js/2.8716e5fa.chunk.js.LICENSE.txt": "/Pattern-Generator/static/js/2.8716e5fa.chunk.js.LICENSE.txt",
+    "static/media/blob.svg": "/Pattern-Generator/static/media/blob.8a42bc92.svg",
+    "static/media/butterfly.svg": "/Pattern-Generator/static/media/butterfly.27d96e32.svg",
+    "static/media/heart.svg": "/Pattern-Generator/static/media/heart.ec65b7a0.svg",
+    "static/media/star.svg": "/Pattern-Generator/static/media/star.ac0e8423.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c99df2b6.js",
-    "static/js/2.daf1bfcf.chunk.js",
+    "static/js/runtime-main.d2255d6b.js",
+    "static/js/2.8716e5fa.chunk.js",
     "static/css/main.dc454b89.chunk.css",
-    "static/js/main.0cd2acbe.chunk.js"
+    "static/js/main.821f1a04.chunk.js"
   ]
 }
