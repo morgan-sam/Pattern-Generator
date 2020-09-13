@@ -1,6 +1,6 @@
 {
   "homepage": "http://morgan-sam.github.io/Pattern-Generator",
-  "name": "Pattern-Generator",
+  "name": "pattern-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
