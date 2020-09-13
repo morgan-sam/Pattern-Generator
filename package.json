@@ -1,5 +1,5 @@
 {
-  "homepage": "http://morgan-sam.github.io/pattern-generator",
+  "homepage": "http://morgan-sam.github.io/Pattern-Generator",
   "name": "pattern-generator",
   "version": "0.1.0",
   "private": true,
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "BROWSER=chromium react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
