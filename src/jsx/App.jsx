@@ -9,6 +9,7 @@ import ImageSelect from "jsx/ImageSelect";
 import { loadImage, drawPattern } from "js/draw";
 
 const App = () => {
+  const [seed, setSeed] = useState(0);
   const [img, setImg] = useState(null);
   const [color, setColor] = useState({
     hue: 0,
@@ -29,8 +30,8 @@ const App = () => {
   });
 
   useEffect(() => {
-    if (img) drawPattern(img, color, params);
-  }, [color, img, params]);
+    if (img) drawPattern(img, color, params, seed);
+  }, [color, img, params, seed]);
 
   const loadImageToState = async (svg) => {
     const loadedImage = await loadImage(svg);
@@ -57,6 +58,12 @@ const App = () => {
           <h2>Parameters</h2>
           <ParameterSliders {...{ params, setParams }} />
         </div>
+        <button
+          className="randomize-button"
+          onClick={() => setSeed(new Date().toISOString())}
+        >
+          Randomize
+        </button>
       </div>
       <canvas
         id="myCanvas"

@@ -7,7 +7,8 @@ export const loadImage = async (imgURL) => {
   });
 };
 
-export const drawPattern = (img, color, params) => {
+export const drawPattern = (img, color, params, seed) => {
+  Math.seedrandom(seed);
   drawCanvasBackground(color, params);
   drawAllShapes(img, params);
 };
