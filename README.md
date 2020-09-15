@@ -1,6 +1,6 @@
 # Pattern-Generator
 
-An app for generating colorful repeating patterns:
+An app for generating colorful repeating pattern images:
 
 https://morgan-sam.github.io/Pattern-Generator/
 
